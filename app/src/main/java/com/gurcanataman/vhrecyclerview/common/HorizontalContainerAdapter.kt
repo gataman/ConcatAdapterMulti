@@ -18,10 +18,6 @@ class HorizontalContainerAdapter(
 
     override fun getItemCount(): Int = 1
 
-    override fun getItemId(position: Int): Long {
-        return position.toLong()
-    }
-
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.bind(adapter)
 
