@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.gurcanataman.vhrecyclerview.model.HorizontalItem" />
+
+        <variable
+            name="listener"
+            type="com.gurcanataman.vhrecyclerview.common.ListAdapterHorizontal.ItemSelectedListener" />
+
+    </data>
+
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/design_default_color_secondary"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="@{item.title}"
+        tools:text="Title"
+        android:onClick="@{()->listener.onItemSelected(item)}"/>
+
+
+</layout>
